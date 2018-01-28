@@ -5,7 +5,7 @@ height: 72sd2
 weight: 175sd10
 sex: male
 ## position: qb=6%, te=2.5%, ot=6.5%,og=6%, c=2.5%, rb=17.5%, wr=9%, de=7%, dt=10%, lb=14%, cb=7%, s=5%, kp=1%, ls=5%, other=1%
-years: 1=2=3=33.3%
+#years: 1=2=3=33.3%
 games: random(1,30)
 lift: random(1,7)
 weeks: random(0,52)
