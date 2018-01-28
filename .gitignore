@@ -2,7 +2,7 @@
 *.iml
 *.class
 /out/
-/data/
+/data/dataset/
 
 
 .virtualenv
