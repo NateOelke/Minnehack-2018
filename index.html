@@ -61,9 +61,9 @@
 				<div class="wrap-input100 validate-input rs425-wrap-input100 select-dropdown" data-validate = "Select sex *">
 					<select id="sex" class="wrap-input100 " name="sex">
                         <option value="" disabled selected>Select your option</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Other</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
                     </select>
                     <span class="focus-input100"></span>
 				</div>
@@ -71,24 +71,24 @@
                 <span class="contact100-form-section">
 					Football Specifics
 				</span>
-                <label class="label-input100 rs133-wrap-input100" for="sex">Position *</label>
+                <label class="label-input100 rs133-wrap-input100" for="position">Position *</label>
                 <label class="label-input100 rs233-wrap-input100" for="years-experience">Years of experience *</label>
                 <label class="label-input100 rs333-wrap-input100" for="games-played">Games played *</label>
                 <div class="wrap-input100 validate-input rs133-wrap-input100 select-dropdown" data-validate = "Select position *">
-                    <select id="football-position" class="wrap-input100 " name="football-position">
+                    <select id="position" class="wrap-input100 " name="position">
                         <option value="" disabled selected>Select your option</option>
-                        <option>QB</option>
-                        <option>RB</option>
-                        <option>OL</option>
-                        <option>WR</option>
-                        <option>TE</option>
-                        <option>DL</option>
-                        <option>LB</option>
-                        <option>CB</option>
-                        <option>S</option>
-                        <option>K</option>
-                        <option>P</option>
-                        <option>Other</option>
+                        <option value="qb">QB</option>
+                        <option value="rb">RB</option>
+                        <option value="ol">OL</option>
+                        <option value="wr">WR</option>
+                        <option value="te">TE</option>
+                        <option value="dl">DL</option>
+                        <option value="lb">LB</option>
+                        <option value="cb">CB</option>
+                        <option value="s">S</option>
+                        <option value="k">K</option>
+                        <option value="p">P</option>
+                        <option value="other">Other</option>
                     </select>
                     <span class="focus-input100"></span>
                 </div>
@@ -167,7 +167,7 @@
                         <label for="broken-bone">Broken bone</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="torn-ligament" name="injuries" value="broken-bone">
+                        <input type="checkbox" id="torn-ligament" name="injuries" value="torn-ligament">
                         <label for="broken-bone">Torn ligament</label>
                     </div>
                     <div>
