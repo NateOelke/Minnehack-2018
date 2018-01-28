@@ -2,8 +2,9 @@
 *.iml
 *.class
 /out/
+/data/
 
 
 .virtualenv
 .vscode
-
+.pyc
