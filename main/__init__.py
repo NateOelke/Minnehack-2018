@@ -22,6 +22,12 @@ def make_app(config = None, testing = None):
 
     return app
 
+@app.route('/result', methods=['GET', 'POST'])
+def result():
+    return render_template('result.html', say=request.form['age'], to=request.form['weight'])
+
+
+
 if __name__ == "__main__":
     config = Config()
     app = make_app(config)
