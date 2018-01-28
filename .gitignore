@@ -2,3 +2,6 @@
 *.iml
 *.class
 /out/
+
+.virtualenv
+.vscode
