@@ -34,13 +34,13 @@ with open('exampledata.csv', 'w', newline='') as csvfile:
         r = random.random()
         
         if(r < 0.4):
-            exercise = 'free'
+            exercise = 0
             exerciseint = 1
         elif(r < 0.8):
-            exercise = 'machine'
+            exercise = 1
             exerciseint = 0
         else:
-            exercise = 'both'
+            exercise = 2
             exerciseint = 1
         
 
@@ -55,7 +55,7 @@ with open('exampledata.csv', 'w', newline='') as csvfile:
         other = max(0,round(random.normalvariate(1,3)))
         total = max(0,round(random.normalvariate(9,5)))
 
-        total_new = random.normalvariate(40 + 3*joint + total - lift/7 + squat/200 - bench/200 - dash/4 - clean/120 + years/3 + exerciseint, 2)
+        total_new = max(0,random.normalvariate(1 + 3*joint + total - lift/7 + squat/200 - bench/200 - dash/4 - clean/120 + years/3 + exerciseint, 2))
 
-        writer.writerow({'id':i, 'age':age, 'height':height, 'weight':weight, 'position':'qb', 'years':years, 'games':games, 'hours':lift, 'weeks':weeks, 'squat':squat, 'bench':bench, 'clean':clean, 'dash':dash, 'exercise':exercise, 'concussion_old':concussion, 'bone_old':bone, 'ligament_old':ligament, 'muscle_old':muscle, 'joint_old':joint, 'tendonitis_old':tendonitis, 'sprain_old':sprain, 'meniscus_old':meniscus, 'concussion_new':0, 'bone_new':0, 'ligament_new':0, 'muscle_new':0, 'joint_new':0, 'tendonitis_new':0, 'sprain_new':0, 'meniscus_new':0, 'total_new':total_new})
+        writer.writerow({'id':i, 'age':age, 'height':height, 'weight':weight, 'position':0, 'years':years, 'games':games, 'hours':lift, 'weeks':weeks, 'squat':squat, 'bench':bench, 'clean':clean, 'dash':dash, 'exercise':exercise, 'concussion_old':concussion, 'bone_old':bone, 'ligament_old':ligament, 'muscle_old':muscle, 'joint_old':joint, 'tendonitis_old':tendonitis, 'sprain_old':sprain, 'meniscus_old':meniscus, 'concussion_new':0, 'bone_new':0, 'ligament_new':0, 'muscle_new':0, 'joint_new':0, 'tendonitis_new':0, 'sprain_new':0, 'meniscus_new':0, 'total_new':total_new})
         
