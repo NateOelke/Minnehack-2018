@@ -332,9 +332,12 @@ iframe {
     width: 25%;
 }
 
-.rs225-wrap-input100,
-.rs325-wrap-input100{
+.rs225-wrap-input100 {
     border-left: none;
+    border-right: none;
+}
+
+.rs325-wrap-input100 {
     border-right: none;
 }
 

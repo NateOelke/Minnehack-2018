@@ -5,28 +5,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="{{url_for ('static', filename = 'images/icons/favicon.ico')}}"/>
+	<link rel="icon" type="image/png" href="../static/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename = 'vendor/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename = 'fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename = 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename = 'vendor/animate/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename = 'vendor/css-hamburgers/hamburgers.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename = 'vendor/animsition/css/animsition.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename = 'vendor/select2/select2.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'vendor/daterangepicker/daterangepicker.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/util.css') }}">
-
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
-    
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
 <!--===============================================================================================-->
 </head>
 
@@ -45,22 +43,22 @@
 					General Information
 				</span>
 				<label class="label-input100 rs125-wrap-input100" for="age">Age *</label>
-                <label class="label-input100 rs225-wrap-input100" for="height">Height *</label>
-                <label class="label-input100 rs325-wrap-input100" for="weight">Weight *</label>
+                <label class="label-input100 rs225-wrap-input100" for="height">Height (inches) *</label>
+                <label class="label-input100 rs325-wrap-input100" for="weight">Weight (lbs) *</label>
                 <label class="label-input100 rs425-wrap-input100" for="sex">Sex *</label>
-                <div class="wrap-input100 rs125-wrap-input100 validate-input" data-validate="Enter age *">
+                <div class="wrap-input100 rs125-wrap-input100 validate-input" data-validate="Enter age">
 					<input id="age" class="input100" type="text" name="age" placeholder="">
 					<span class="focus-input100"></span>
 				</div>
-                <div class="wrap-input100 rs225-wrap-input100 validate-input" data-validate="Enter height *">
+                <div class="wrap-input100 rs225-wrap-input100 validate-input" data-validate="Enter height (inches)">
                     <input id="height" class="input100" type="text" name="height" placeholder="">
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 rs325-wrap-input100 validate-input" data-validate="Enter height *">
+                <div class="wrap-input100 rs325-wrap-input100 validate-input" data-validate="Enter weight (lbs)">
                     <input id="weight" class="input100" type="text" name="weight" placeholder="">
                     <span class="focus-input100"></span>
                 </div>
-				<div class="wrap-input100 validate-input rs425-wrap-input100 select-dropdown" data-validate = "Select sex *">
+				<div class="wrap-input100 validate-input rs425-wrap-input100 select-dropdown" data-validate = "Select sex">
 					<select id="sex" class="wrap-input100 " name="sex">
                         <option value="" disabled selected>Select your option</option>
                         <option value="male">Male</option>
@@ -76,7 +74,7 @@
                 <label class="label-input100 rs133-wrap-input100" for="position">Position *</label>
                 <label class="label-input100 rs233-wrap-input100" for="years-experience">Years of experience *</label>
                 <label class="label-input100 rs333-wrap-input100" for="games-played">Games played *</label>
-                <div class="wrap-input100 validate-input rs133-wrap-input100 select-dropdown" data-validate = "Select position *">
+                <div class="wrap-input100 validate-input rs133-wrap-input100 select-dropdown" data-validate = "Select position">
                     <select id="position" class="wrap-input100 " name="position">
                         <option value="" disabled selected>Select your option</option>
                         <option value="qb">QB</option>
@@ -94,11 +92,11 @@
                     </select>
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 rs233-wrap-input100 validate-input" data-validate="Enter years of experience * *">
+                <div class="wrap-input100 rs233-wrap-input100 validate-input" data-validate="Enter years of experience">
                     <input id="years-experience" class="input100" type="text" name="years-experience" placeholder="">
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 rs333-wrap-input100 validate-input" data-validate="Enter height *">
+                <div class="wrap-input100 rs333-wrap-input100 validate-input" data-validate="Enter games played">
                     <input id="games-played" class="input100" type="text" name="games-played" placeholder="">
                     <span class="focus-input100"></span>
                 </div>
@@ -108,11 +106,11 @@
 				</span>
                 <label class="label-input100 rs150-wrap-input100" for="avg-days-week">Average days lifting per week *</label>
                 <label class="label-input100 rs250-wrap-input100" for="weeks-year">Number of weeks lifting per year *</label>
-                <div class="wrap-input100 rs150-wrap-input100 validate-input" data-validate="Enter average days lifting per week *">
+                <div class="wrap-input100 rs150-wrap-input100 validate-input" data-validate="Enter average days lifting per week">
                     <input id="avg-days-week" class="input100" type="text" name="avg-days-week" placeholder="">
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 rs250-wrap-input100 validate-input" data-validate="Enter number of weeks lifting per year *">
+                <div class="wrap-input100 rs250-wrap-input100 validate-input" data-validate="Enter number of weeks lifting per year">
                     <input id="weeks-year" class="input100" type="text" name="weeks-year" placeholder="">
                     <span class="focus-input100"></span>
                 </div>
@@ -120,20 +118,20 @@
                 <label class="label-input100 rs125-wrap-input100" for="squat">Squat (lbs) *</label>
                 <label class="label-input100 rs225-wrap-input100" for="bench">Bench (lbs) *</label>
                 <label class="label-input100 rs325-wrap-input100" for="clean">Clean (lbs) *</label>
-                <label class="label-input100 rs425-wrap-input100" for="yard-dash">40 yard dash (sec) *</label>
-                <div class="wrap-input100 rs125-wrap-input100 validate-input" data-validate="Enter squat weight (lbs) *">
+                <label class="label-input100 rs425-wrap-input100" for="yard-dash">40 yard dash (seconds) *</label>
+                <div class="wrap-input100 rs125-wrap-input100 validate-input" data-validate="Enter squat weight (lbs)">
                     <input id="squat" class="input100" type="text" name="squat" placeholder="">
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 rs225-wrap-input100 validate-input" data-validate="Enter bench weight (lbs) *">
+                <div class="wrap-input100 rs225-wrap-input100 validate-input" data-validate="Enter bench weight (lbs)">
                     <input id="bench" class="input100" type="text" name="bench" placeholder="">
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 rs325-wrap-input100 validate-input" data-validate="Enter clean weight *">
+                <div class="wrap-input100 rs325-wrap-input100 validate-input" data-validate="Enter clean weight (lbs)">
                     <input id="clean" class="input100" type="text" name="clean" placeholder="">
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 rs425-wrap-input100 validate-input" data-validate="Enter 40 yard dash (sec) *">
+                <div class="wrap-input100 rs425-wrap-input100 validate-input" data-validate="Enter 40 yard dash (seconds)">
                     <input id="yard-dash" class="input100" type="text" name="yard-dash" placeholder="">
                     <span class="focus-input100"></span>
                 </div>
@@ -170,7 +168,7 @@
                     </div>
                     <div>
                         <input type="checkbox" id="torn-ligament" name="injuries" value="torn-ligament">
-                        <label for="broken-bone">Torn ligament</label>
+                        <label for="torn-ligament">Torn ligament</label>
                     </div>
                     <div>
                         <input type="checkbox" id="torn-muscle" name="injuries" value="torn-muscle">
@@ -214,14 +212,14 @@
 	<div id="dropDownSelect1"></div>
 
 <!--===============================================================================================-->
-	<script src="{{url_for('static', filename= 'vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="{{url_for('static', filename= 'vendor/animsition/js/animsition.min.js')}}"></script>
+	<script src="../static/vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="{{url_for('static', filename= 'vendor/bootstrap/js/popper.js')}}"></script>
-	<script src="{{url_for('static', filename= 'vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+	<script src="../static/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="{{url_for('static', filename= 'vendor/select2/select2.min.js')}}"></script>
+	<script src="../static/vendor/select2/select2.min.js"></script>
 	<script>
 		$(".selection-2").select2({
 			minimumResultsForSearch: 20,
@@ -229,12 +227,12 @@
 		});
 	</script>
 <!--===============================================================================================-->
-	<script src="{{url_for('static',filename= 'vendor/daterangepicker/moment.min.js')}}"></script>
-	<script src="{{url_for('static',filename= 'vendor/daterangepicker/daterangepicker.js')}}"></script>
+	<script src="../static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="../static/vendor/daterangepicker/daterangepicker.js"></script>
 <!--===============================================================================================-->
-	<script src="{{url_for('static',filename= 'vendor/countdowntime/countdowntime.js')}}"></script>
+	<script src="../static/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="{{url_for('static',filename= 'js/main.js')}}"></script>
+	<script src="../static/js/main.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 	<script>
