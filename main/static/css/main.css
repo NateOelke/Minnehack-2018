@@ -194,6 +194,13 @@ iframe {
   width: calc(100% - 43px);
 }
 
+.checkbox-input {
+    width: 60%;
+    padding-left: 10px;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    visibility: hidden;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ Contact ]*/

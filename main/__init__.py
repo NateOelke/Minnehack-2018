@@ -1,9 +1,12 @@
 import logging
 import sys
 
-from flask import Flask, url_for
+from flask import Flask, url_for, render_template, request
 
 from main.config import Config
+
+app = Flask(__name__)
+
 def make_app(config = None, testing = None):
     if not config:
         if not testing:
@@ -11,7 +14,7 @@ def make_app(config = None, testing = None):
         config = Config(testing=testing)
 
     # Create a Flask app object.
-    app = Flask(__name__)
+
     app.config.from_object(config)
 
     import main.views as views
