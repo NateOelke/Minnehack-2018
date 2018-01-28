@@ -5,15 +5,14 @@ from keras.layers import Dense
 from keras.optimizers import Adam
 from keras.models import Sequential
 
-
 class InjuryModel:
     def __init__(self, input_dimensions, output_dimensions):
         self.input_dimensions = input_dimensions
         self.output_dimensions = output_dimensions
 
-        self.learning_rate = 0.01
+        self.learning_rate = 0.005
         self.batch_size = 16
-        self.epochs = 10
+        self.epochs = 15
 
         self.model = self.create_model()
 
@@ -26,35 +25,33 @@ class InjuryModel:
                             kernel_initializer='he_uniform'))
         model.add(Dense(self.output_dimensions, activation='linear',
                             kernel_initializer='he_uniform'))
-        model.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.01))
+        model.compile(loss='mse', optimizer=Adam(lr=self.learning_rate))
         return model
 
     def train_model(self, X, y):
-        self.model.fit(X, y, 16, epochs=10, verbose=1)
+        self.model.fit(X, y, validation_split=0.33, batch_size=16, epochs=self.epochs, verbose=1)
 
     def predict(self, X):
-        return self.model.predict(X, batch_size=1, verbose=0)
+        newX = np.reshape(X, (1, self.input_dimensions))
+        return self.model.predict(newX, batch_size=1, verbose=0)
 
 def load_data(data_path):
-    # Load classes
-    '''
-    with open(data_path, 'r') as csvfile:
-        reader = csv.reader(csvfile, delimiter=",")
-        attribute_sets = []
-        for row in reader:
-            for value in row:
-    '''
-    return None, None
-
-
+    # Column 34 is start of output values
+    data = np.loadtxt(data_path, delimiter=",")
+    X = data[:, 0:33]
+    y = data[:, -1]
+    return X, y
 
 if __name__ == '__main__':
-    X, y = load_data("../data/flavors_of_cacao.csv")
+    X, y = load_data("../data/exampledata.csv")
     input_dimensions = X.shape[1]
     output_dimensions = 1
 
-    print("Creating model")
+    print("\nInput dim: " + str(input_dimensions))
+    print("Output dim: " + str(output_dimensions))
+
     model = InjuryModel(input_dimensions, output_dimensions)
-    print("Training model")
     model.train_model(X, y)
-    print("Done")
+    #print("\n")
+    #print(X[2])
+    #print(model.predict(X[0]))
