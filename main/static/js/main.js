@@ -1,21 +1,6 @@
 var noneCheckbox = document.getElementById('no-injury');
 var checkboxes = document.getElementsByName('injuries');
 
-for (var i = 0; i < checkboxes.length; i++) {
-    checkboxes[i].onchange = function (e) {
-        if (this !== noneCheckbox) {
-            var checkboxInput = document.getElementById(this.getAttribute('id')+'-games');
-            if (checkboxInput.style.visibility !== 'visible') {
-                checkboxInput.style.visibility = 'visible';
-            }
-            else {
-                checkboxInput.style.visibility = 'hidden';
-            }
-        }
-    };
-}
-
-
 noneCheckbox.onchange = function (e) {
     if (noneCheckbox.checked)
     {

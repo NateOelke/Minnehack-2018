@@ -34,8 +34,9 @@
     </header>
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form" method="get" action="{{url_for('result'}}">
-				<span class="contact100-form-title">
+			<form class="contact100-form validate-form" method="get" action="result.html">
+
+                <span class="contact100-form-title">
 					Please fill out
 				</span>
 
@@ -53,6 +54,7 @@
                 <div class="wrap-input100 rs225-wrap-input100 validate-input" data-validate="Enter height (inches)">
                     <input id="height" class="input100" type="text" name="height" placeholder="">
                     <span class="focus-input100"></span>
+
                 </div>
                 <div class="wrap-input100 rs325-wrap-input100 validate-input" data-validate="Enter weight (lbs)">
                     <input id="weight" class="input100" type="text" name="weight" placeholder="">
@@ -157,61 +159,20 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Choose injuries experienced last season</legend>
-                    <div>
-                        <input type="checkbox" id="concussion" name="injuries" value="concussion">
-                        <label for="concussion">Concussion</label>
-                        <input type="text" id="concussion-games" class="checkbox-input" name="concussion-games" placeholder="Number of games missed">
-                    </div>
-                    <div>
-                        <input type="checkbox" id="broken-bone" name="injuries" value="broken-bone">
-                        <label for="broken-bone">Broken bone</label>
-                        <input type="text" id="broken-bone-games" class="checkbox-input" name="broken-bone-games" placeholder="Number of games missed">
-                    </div>
-                    <div>
-                        <input type="checkbox" id="torn-ligament" name="injuries" value="torn-ligament">
-                        <label for="torn-ligament">Torn ligament</label>
-                        <input type="text" id="torn-ligament-games" class="checkbox-input" name="torn-ligament-games" placeholder="Number of games missed">
-                    </div>
-                    <div>
-                        <input type="checkbox" id="torn-muscle" name="injuries" value="torn-muscle">
-                        <label for="torn-muscle">Torn muscle</label>
-                        <input type="text" id="torn-muscle-games" class="checkbox-input" name="torn-muscle-games" placeholder="Number of games missed">
-                    </div>
-                    <div>
-                    <input type="checkbox" id="dislocated-joint" name="injuries" value="dislocated-joint">
-                    <label for="dislocated-joint">Dislocated joint</label>
-                        <input type="text" id="dislocated-joint-games" class="checkbox-input" name="dislocated-joint-games" placeholder="Number of games missed">
-                </div>
-                    <div>
-                        <input type="checkbox" id="tendonitis" name="injuries" value="tendonitis">
-                        <label for="tendonitis">Tendonitis</label>
-                        <input type="text" id="tendonitis-games" class="checkbox-input" name="tendonitis-games" placeholder="Number of games missed">
-                    </div>
-                    <div>
-                        <input type="checkbox" id="sprain" name="injuries" value="sprain">
-                        <label for="sprain">Sprain</label>
-                        <input type="text" id="sprain-games" class="checkbox-input" name="sprain-games" placeholder="Number of games missed">
-                    </div>
-                    <div>
-                        <input type="checkbox" id="torn-meniscus" name="injuries" value="torn-meniscus">
-                        <label for="torn-meniscus">Torn meniscus</label>
-                        <input type="text" id="torn-meniscus-games" class="checkbox-input" name="torn-meniscus-games" placeholder="Number of games missed">
-                    </div>
-                    <div>
-                        <input type="checkbox" id="other-injury" name="injuries" value="other-injury">
-                        <label for="other-injury">Other</label>
-                        <input type="text" id="other-games" class="checkbox-input" name="other-games" placeholder="Number of games missed">
-                    </div>
-                    <div>
-                        <input type="checkbox" id="no-injury" name="injuries" value="no-injury">
-                        <label for="no-injury">None</label>
-                    </div>
-                </fieldset>
+                    <label class="label-input100" for="games-missed-last-season">Games missed last season *</label>
+                    <div class="wrap-input100 validate-input" data-validate="Enter games missed last season">
+                    <input id="games-missed-last-season" class="input100" type="text" name="games-missed-last-season" placeholder="">
+                    <span class="focus-input100"></span>
 
+                    <label class="label-input100" for="games-missed-current-season">Games missed this season *</label>
+                    <div class="wrap-input100 validate-input" data-validate="Enter games missed this seasn">
+                        <input id="games-missed-current-season" class="input100" type="text" name="games-missed-current-season" placeholder="">
+                        <span class="focus-input100"></span>
+                    </div></div></fieldset>
                 <div class="container-contact100-form-btn">
                     <input type="submit" class="contact100-form-btn" value="Submit">
                 </div>
+
 			</form>
 		</div>
 	</div>
