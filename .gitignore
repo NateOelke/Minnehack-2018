@@ -3,8 +3,9 @@
 *.class
 /out/
 /data/dataset/
+/data/dataset.zip
 
 
 .virtualenv
 .vscode
-.pyc
+*.pyc
