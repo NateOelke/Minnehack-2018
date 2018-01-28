@@ -4,7 +4,7 @@ blueprint = Blueprint("base", __name__)
 
 @blueprint.route("/result.html", methods=["GET"])
 def result():
-    with open("/home/nathan/Documents/Minnehack-2018/data/database.csv", "a") as csvfile:
+    with open("data/database.csv", "a") as csvfile:
         row = ""
         args = request.args
         print(args)
@@ -40,7 +40,6 @@ def result():
         row += "\n"
         csvfile.write(row)
         return render_template("result.html", predicted_missed_games=5)
-
 
 
 @blueprint.route("/")
