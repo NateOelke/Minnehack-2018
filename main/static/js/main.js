@@ -1,30 +1,3 @@
-var noneCheckbox = document.getElementById('no-injury');
-var checkboxes = document.getElementsByName('injuries');
-
-noneCheckbox.onchange = function (e) {
-    if (noneCheckbox.checked)
-    {
-        for (var i = 0; i < checkboxes.length; i++)
-        {
-            if (checkboxes[i] !== this)
-            {
-                checkboxes[i].checked = false;
-                checkboxes[i].disabled = true;
-            }
-        }
-    }
-    else
-    {
-        for (var i = 0; i < checkboxes.length; i++)
-        {
-            if (checkboxes[i] !== this)
-            {
-                checkboxes[i].disabled = false;
-            }
-        }
-    }
-};
-
 (function ($) {
     "use strict";
 
