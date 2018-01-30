@@ -5,6 +5,8 @@ The project consists of a website with a form that football players can fill out
 
 ### Server running instructions
 Windows: .virtualenv/Scripts/python manage.py "runserver" on git bash
+
 Ubuntu: .virtualenv/bin/python3 manage.py "runserver"
+
 
 Local website address is localhost:8000
