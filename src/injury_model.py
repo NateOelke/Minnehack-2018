@@ -10,9 +10,9 @@ class InjuryModel:
         self.input_dimensions = input_dimensions
         self.output_dimensions = output_dimensions
 
-        self.learning_rate = 0.005
+        self.learning_rate = 0.003
         self.batch_size = 16
-        self.epochs = 15
+        self.epochs = 20
 
         self.model = self.create_model()
 
@@ -29,29 +29,27 @@ class InjuryModel:
         return model
 
     def train_model(self, X, y):
-        self.model.fit(X, y, validation_split=0.33, batch_size=16, epochs=self.epochs, verbose=1)
+        self.model.fit(X, y, validation_split=0.33, batch_size=self.batch_size, \
+            epochs=self.epochs, verbose=1)
 
     def predict(self, X):
-        newX = np.reshape(X, (1, self.input_dimensions))
-        return self.model.predict(newX, batch_size=1, verbose=0)
+        return self.model.predict(X, verbose=1)
 
 def load_data(data_path):
-    # Column 34 is start of output values
     data = np.loadtxt(data_path, delimiter=",")
-    X = data[:, 0:33]
+    X = data[:, 0:-1]
     y = data[:, -1]
     return X, y
 
 if __name__ == '__main__':
     X, y = load_data("../data/exampledata.csv")
+    X_val, y_val = load_data("../data/exampledata_val.csv")
     input_dimensions = X.shape[1]
     output_dimensions = 1
 
-    print("\nInput dim: " + str(input_dimensions))
-    print("Output dim: " + str(output_dimensions))
-
     model = InjuryModel(input_dimensions, output_dimensions)
     model.train_model(X, y)
-    #print("\n")
-    #print(X[2])
-    #print(model.predict(X[0]))
+
+    #test_predictions = model.predict(X_val)
+    #with open("../data/exampledata_val_predictions.csv", "w") as output:
+    #    output.write(np.array_str(test_predictions))
