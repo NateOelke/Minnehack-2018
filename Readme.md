@@ -1,7 +1,10 @@
 # Minnehack 2018
-Our project for Minnehack 2018 focuses on the 'prevent sports injuries' prompt. We created a model to predict which exercise regimes have a bigger chance of causing an injury to a highschool football player.
+Our project for Minnehack 2018 focuses on the prevention of football injuries. We created a simple website for collecting football injury data and a machine learning model for predicting the number of games a player is expected to miss due to injury given their physical stats, position, training specifications, and injury history.
 
-The project consists of a website containing an online form that high schools will be able to fill out. The data will be stored as a .csv file where each row is one player entry. The .csv file will be fed to a deep neural network that uses regression to predict the chance of a player getting injured if they continue with their current workout regime. The prediction will be displayed on the results page to conclude our project.
+The project consists of a website with a form that football players can fill out to receive a prediction of their injury outlook. After a form submission, the data is added to the database on the server and is then fed into a deep neural network that predicts the number of games the player is expected to miss due to injury.
 
-Run .virtualenv/Scripts/python manage.py "runserver" on git bash. Server is localhost:8000
- 
+### Server running instructions
+Windows: .virtualenv/Scripts/python manage.py "runserver" on git bash
+Ubuntu: .virtualenv/bin/python3 manage.py "runserver"
+
+Local website address is localhost:8000
