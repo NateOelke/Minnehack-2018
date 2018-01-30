@@ -1,11 +1,18 @@
 import logging
 import sys
-
+sys.path.insert(0, "src")
+from injury_model import *
 from flask import Flask, url_for, render_template, request
-
 from main.config import Config
 
 app = Flask(__name__)
+
+# Set up injury model
+X, y = load_data("data/database.csv")
+input_dimensions = X.shape[1]
+output_dimensions = 1
+model = InjuryModel(input_dimensions, output_dimensions)
+model.train_model(X, y)
 
 def make_app(config = None, testing = None):
     if not config:
@@ -25,8 +32,6 @@ def make_app(config = None, testing = None):
 @app.route('/result', methods=['GET', 'POST'])
 def result():
     return render_template('result.html', say=request.form['age'], to=request.form['weight'])
-
-
 
 if __name__ == "__main__":
     config = Config()

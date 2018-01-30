@@ -33,7 +33,14 @@ class InjuryModel:
             epochs=self.epochs, verbose=1)
 
     def predict(self, X):
-        return self.model.predict(X, verbose=1)
+        print(X.ndim)
+        if X.ndim == 2:
+            return self.model.predict(X, verbose=0)
+        elif X.ndim == 1:
+            newX = np.array([X])
+            return self.model.predict(newX, verbose=0)[0]
+        else:
+            return None
 
 def load_data(data_path):
     data = np.loadtxt(data_path, delimiter=",")

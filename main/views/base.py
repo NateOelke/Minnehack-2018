@@ -1,13 +1,23 @@
+import sys
+import numpy as np
 from flask import Flask, Blueprint, render_template, request
+sys.path.insert(0, "src")
+from injury_model import *
+sys.path.insert(0, "main")
+from __init__ import *
 
 blueprint = Blueprint("base", __name__)
 
 @blueprint.route("/result.html", methods=["GET"])
 def result():
+    # Use global model created in __init__.py
+    global model
+
+    # Append submited data to database.csv
     with open("data/database.csv", "a") as csvfile:
+        # Parse website form data and append as a row to the csv file
         row = ""
         args = request.args
-        print(args)
         for key, value in args.items():
             if key == "sex":
                 if value == "male":
@@ -37,10 +47,14 @@ def result():
             else:
                 row += value + ","
 
+        row = row[:-1]
         row += "\n"
         csvfile.write(row)
-        return render_template("result.html", predicted_missed_games=5)
 
+    # Predict the number of missed games using the inputed data
+    X,y = load_data("data/database.csv")
+    predicted_missed_games = max(model.predict(X[-1])[0], 0)
+    return render_template("result.html", predicted_missed_games=predicted_missed_games)
 
 @blueprint.route("/")
 def index():
